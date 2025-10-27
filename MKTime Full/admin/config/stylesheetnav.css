@@ -1,0 +1,24 @@
+
+nav {
+    background-color: rgb(16, 90, 119);
+}
+
+.navbar-brand {
+    margin-left: 20px;
+    font-family: Cyreal;
+    font-size: 20px;
+ }
+
+ .navbar.navbar {
+    width: 100%;
+ }
+
+.ul ,li {
+    font-family: Cyreal;
+    font-size: 20px;
+}
+
+.navbar-text {
+    font-family: Cyreal;
+    font-size: 20px;
+}

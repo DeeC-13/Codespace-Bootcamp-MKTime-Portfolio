@@ -1,0 +1,227 @@
+h1 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-family: Cyreal;
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 15px;
+  }
+
+h2 {
+    color: white;
+    font-style: italic;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: Cyreal;
+    font-size: 25px;
+    font-weight: 600;
+    justify-self: center;
+  }  
+
+h5 {
+    text-align: center;
+    color: white;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+h6 {
+    color: white(0, 0, 0, 0.79);
+    font-family: Cyreal;
+    font-size: 20px;
+    text-align: left;
+    padding: 5px;
+  }
+
+html, body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.image-button {
+  float: right;
+  padding-top: 30px;
+}    
+
+.nav-link  {
+    color: white !important;
+    font-family: Cyreal;
+    font-size: 20px;
+    &:hover{
+        color:white !important;
+      }
+  } 
+
+#mk1 {
+    text-align: center;
+    padding: 20px;
+  }   
+ 
+.container-fluid {
+    text-align: center;
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+
+.form-label {
+    font-family: Cyreal;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+  }
+
+#info {
+    text-align: left;
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+  
+#verify {
+    text-align: left;
+    font-family: Cyreal;
+    font-size: 20px;
+  }  
+
+.card-one {
+    background-color: rgb(104, 154, 104);
+    border-radius: 10px;
+    border: 10px solid rgb(60, 110, 93);
+    min-width: 300px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 90px;
+  } 
+
+.card-one:after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    background: rgb(13, 76, 76);
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+.card-two {
+    background-color: rgb(104, 154, 104);
+    border-radius: 10px;
+    border: 10px solid rgb(60, 110, 93);
+    min-width: 300px;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 90px;
+  }    
+ 
+.card-two:after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    background: rgb(13, 76, 76);
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+.card-one-title {
+    font-family: Cyreal;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+.card-two-title {
+    font-family: Cyreal;
+    font-size: 30px;
+    font-weight: 600;
+  }  
+  
+.alert {
+    border-radius: 10px;
+    border: 10px solid rgb(60, 110, 93);
+    min-width: 300px;
+    max-width: 450px;
+    width: 65%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-self: center;
+  }   
+
+.alert:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgb(13, 76, 76);
+    z-index: -1;
+    border-radius: 10px;
+  }   
+
+.signin-input {
+  min-width: 200px;
+  width: 100%;
+} 
+
+.reg-input {
+  width: 100%;
+}
+
+.btn {
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+
+#btn1 {
+    font-family: Cyreal;
+    font-size: 20px;
+    background-color: rgb(49, 128, 124);
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    text-decoration:none;
+    margin-bottom: 15px;
+  } 
+
+#end.container-fluid  {
+    display: flex;
+    text-align: center;
+    font-family: Cyreal;
+    font-size: 20px;
+    margin: 0px;
+  }
+    
+.footer-column {
+    flex: 1 1 25%; 
+    padding: 20px;
+}   
+
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex: 1 1 100%; 
+    }
+}

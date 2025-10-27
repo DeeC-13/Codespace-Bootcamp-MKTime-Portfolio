@@ -1,0 +1,144 @@
+<?php
+
+$database = 'mktime';
+$user = 'root';
+$password = '';
+
+$servername='localhost:3306';
+$mysqli = new mysqli($servername, $user, $password, $database);
+
+// Checking for connections
+if ($mysqli->connect_error) {
+    die('Connect Error (' .
+    $mysqli->connect_errno . ') '.
+    $mysqli->connect_error);
+}
+
+require 'connect_db.php';
+  session_start();
+
+if (!isset($_SESSION['employee_id'])) {
+    header('Location: admin_signin.php');
+    exit();
+  }
+
+
+$sql = " SELECT * FROM products ORDER BY item_id ";
+$result = $mysqli->query($sql);
+$mysqli->close();  
+
+?>
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MK Time Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+
+    <div class="container-fluid" style = "padding:0px;">
+      <nav class="navbar navbar-expand-lg" style = "background-color: rgba(12, 69, 91, 1);">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" style = "color: white;" href="../admin/admin.php">Home <span class="sr-only"></span></a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style = "color: white;" href="../admin/orders.php">Order Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style = "color: white;" href="../admin/customers.php">Customer Details</a>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style = "color: white;" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Product Amend</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" style = "color: white;" href="../admin/create.php">Add Item</a>
+                    <a class="dropdown-item" style = "color: white;" href="../admin/update.php">Update Item</a>
+                    <a class="dropdown-item" style = "color: white;" href="../admin/read.php">Stock List</a>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link" style = "color: white;" href="admin_logout.php">Log Out</a>
+                </li>
+              </ul>
+            </div>
+      </nav>
+    </div>  
+
+<body>
+
+    <div class = "container" id = "main">
+      <div class = "col-lg-10 col-md-12 col-sm-10">
+        
+        <div class="row">
+            <h3> MK Time</h3>
+        </div>  
+
+          <div class="row" id = "table-title">
+              <h3> Product Details</h3>
+          </div> 
+
+          <div class="row" id = "table">
+            <div class = "container"> 
+              <div class = "col-lg-12 col-md-12 col-sm-12">
+  
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" colspan="1" name = "item_id">Item_id</th>
+                        <th scope="col" colspan="2" name = "item_name">Item_name</th> 
+                        <th scope="col" colspan="5" name = "item_desc">Item_desc</th>
+                        <th scope="col" colspan="1" name = "item_img">Item_Img</th>
+                        <th scope="col" colspan="1" name = "item_price">Item_price</th>
+                        <th scope="col" colspan="1" name = "delete"></th>
+                      </tr>
+                    </thead>
+
+                      <tbody>
+                            <?php 
+                                // LOOP TILL END OF DATA
+                                
+                                while($rows=$result->fetch_assoc())
+                                {
+                            ?>
+                            <tr>
+                                <!-- FETCHING DATA FROM EACH
+                                    ROW OF EVERY COLUMN -->
+                                <td colspan="1"><?php echo $rows['item_id'];?></td>
+                                <td colspan="2"><?php echo $rows['item_name'];?></td>
+                                <td colspan="5"><?php echo $rows['item_desc'];?></td>
+                                <td colspan="1"><img src = "../admin/item_img/<?php echo $rows['item_img'];?>"></img></td>
+                                <td colspan="1"><?php echo $rows['item_price'];?></td>
+                                <td colspan="1"><a class = "btn btn-del" id = "btn" type = "delete"  
+                                                  onclick="return confirm('Are you sure you want to delete this item?')"
+                                                  href="delete.php?item_id=<?php echo $rows['item_id'];?>">Delete</a></td>
+                            </tr>
+                                                      
+                            <?php
+                                }
+                            ?>
+                      </tbody>
+                  </table>
+
+              </div>
+            </div>     
+          </div>
+
+      </div>                      
+    </div>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="../admin/config/stylesheeta.css">
+
+</body>
+
+</html>

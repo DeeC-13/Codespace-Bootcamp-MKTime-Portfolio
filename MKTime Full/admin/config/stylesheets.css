@@ -1,0 +1,190 @@
+
+h1 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-family: Cyreal;
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 15px;
+  }
+
+h2 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+h5 {
+    text-align: center;
+    color: white;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+h6 {
+    color: white;
+    font-family: Cyreal;
+    font-size: 20px;
+    text-align: left;
+    margin: 0px;
+    padding: 5px;
+  }
+
+html, body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.image-button {
+  float: right;
+  padding-top: 30px;
+} 
+  
+.nav-link  {
+  color: white;
+  font-family: Cyreal;
+  font-size: 20px;
+  &:hover{
+    color:white !important;
+  }
+}   
+
+#mk1 {
+    text-align: center;
+    padding: 20px;
+  }
+
+p {
+    color: white;
+    text-align: center;
+    margin: 10px;
+    font-family: Cyreal;
+    font-size: 25px;
+    font-style: italic;
+  }
+
+.p1 {
+    color: white;
+    text-align: center;
+    padding: 0 50px 0px 50px;
+    margin: 25px;
+    font-family: Cyreal;
+    font-size: 25px;
+    font-style: italic;
+  }
+
+#watches {
+    display: inline-block;
+    max-height: 550px;
+    width: 85%;
+  }
+
+.carousel-item.active {
+    left: 0;
+    background-repeat: no-repeat;
+    transition: all 0.3s linear;    
+  }
+
+div.carousel-inner img{
+    margin: auto;
+    width: auto;    
+    padding-top: 30px;
+    padding-left: 40px;
+  }
+
+#him-her {
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0 0px 0;
+    font-family: Cyreal;
+    font-style: italic;
+    font-size: 50px;
+  }
+
+.container-fluid{
+    text-align: center;
+    padding: -5px 0 0 10px;
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+
+.img-fluid {
+    padding: 10px;
+  }
+
+.card {
+  border-radius: 10px;
+  }
+ 
+.card-title {
+    font-family: Cyreal;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+.row1 {
+  padding-top: 20px;
+}        
+
+.btn {
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+
+#btn {
+    font-family: Cyreal;
+    font-size: 20px;
+    background-color: rgb(49, 128, 124);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration:none;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+#range{
+    padding: 20px 50px 20px 50px;
+    margin: auto;
+  }
+
+#range1{
+    padding: 20px 50px 20px 50px;
+    margin: auto;
+  }
+
+#end.container-fluid  {
+    display: flex;
+    text-align: center;
+    font-family: Cyreal;
+    font-size: 20px;
+    margin: 0px;
+  }
+    
+.footer-column {
+    flex: 1 1 25%; 
+    padding: 20px;
+}   
+
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex: 1 1 100%; 
+    }
+}

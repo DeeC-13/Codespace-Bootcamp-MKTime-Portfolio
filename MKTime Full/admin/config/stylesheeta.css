@@ -1,0 +1,129 @@
+
+body {
+  background: rgba(36, 109, 121, 1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+}
+
+.navbar .container-fluid, 
+.navbar-expand-lg .navbar-collapse, 
+.navbar-expand-lg .navbar-nav{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    width: 20%;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    font-family: Cyreal;
+    font-size: 25px;
+  }
+}
+
+.dropdown-item {
+    font-family: Cyreal;
+    font-size: 18px;
+}
+
+.container {
+  display: flex;
+}
+
+#table {
+   margin-left: 10px;
+   display: block;
+}
+
+#main {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+h3 {
+    text-align: left;
+    color: white;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 600;
+    padding-left: 20px;
+  } 
+
+.row {
+    justify-content: left;
+    height: 80px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+ @media (max-width: 600px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+        td {
+            text-align: right;
+        }
+        td::before {
+            content: attr(data-label);
+            float: left;
+        }
+    }
+    
+#table-title h3 {
+    padding: 10px;
+		margin-left: 10px;
+		font-size:25px; 
+    background: #a5f4efff;
+	}
+
+tr:hover {background-color: rgba(206, 221, 250, 1);}
+thead {
+      background: #a5f4efff;
+
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+table {
+    outline: 2px solid rgba(70, 81, 128, 1); 
+    border-collapse: collapse;
+}
+
+table td:first-child {
+     border-left: thin solid;
+}
+
+table td:last-child {
+     border-right: thin solid;
+} 
+
+img {
+  height: 70px;
+  width: 45px;
+}
+  
+#btn {
+    font-family: Cyreal;
+    font-size: 15px;
+    background-color: rgba(70, 81, 128, 1);
+    color: white;
+    border-color: rgba(13, 24, 73, 1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+    height: 40px;
+  }  
+
+  
+#btn:hover {
+    background-color: rgb(246, 68, 68);
+  }
+

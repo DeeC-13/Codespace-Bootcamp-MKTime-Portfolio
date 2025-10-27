@@ -1,0 +1,184 @@
+h1 {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-family: Cyreal;
+    font-size: 60px;
+    font-weight: 800;
+    padding-top: 15px;
+  }
+
+h2 {
+    color: white;
+    font-style: italic;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: Cyreal;
+    font-size: 25px;
+    font-weight: 600;
+    justify-self: center;
+  }  
+
+h4 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}  
+
+h5 {
+    text-align: center;
+    color: white;
+    font-family: Cyreal;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+h6 {
+    color: white(0, 0, 0, 0.79);
+    font-family: Cyreal;
+    font-size: 20px;
+    text-align: left;
+    padding: 5px;
+  }
+
+html, body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.image-button {
+  float: right;
+  padding-top: 30px;
+}  
+  
+.nav-link  {
+    color: white;
+    font-family: Cyreal;
+    font-size: 20px;
+    &:hover{
+        color:white !important;
+      }
+  } 
+
+#mk1 {
+    text-align: center;
+    padding: 20px;
+  }   
+ 
+.container-fluid {
+    text-align: center;
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+
+.card {
+    border-radius: 10px;
+    border: 10px solid rgb(60, 110, 93);
+    min-width: 300px;
+    max-width: 800px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }   
+
+.card:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgb(13, 76, 76);
+    z-index: -1;
+    border-radius: 10px;
+  }   
+
+.card-img {
+    display: block;
+    margin: 0 auto;
+    max-height: 295px;
+    max-width: 200px;
+    padding: 10px 20px 10px 20px;
+} 
+
+.card-text-title {
+    font-family: Cyreal;
+    font-size: 30px;
+    font-weight: 450;
+}
+
+.card-text-added {
+    text-align: center;
+    font-family: Cyreal;
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-text-price {
+    font-family: Cyreal;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   
+
+.btn {
+    font-family: Cyreal;
+    font-size: 20px;
+  } 
+
+#btn1.btn {
+    font-family: Cyreal;
+    font-size: 20px;
+    background-color: rgb(49, 128, 124);
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-decoration:none;    
+    margin: auto;
+    width: 45%;
+  } 
+
+#product{
+    min-height: fit-content;
+    width: 60%;
+    padding: 20px 50px 20px 50px;
+  } 
+
+#end.container-fluid  {
+    display: flex;
+    text-align: center;
+    font-family: Cyreal;
+    font-size: 20px;
+    margin: 0px;
+  }
+    
+.footer-column {
+    flex: 1 1 25%; 
+    padding: 20px;
+}   
+
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex: 1 1 100%; 
+    }
+}

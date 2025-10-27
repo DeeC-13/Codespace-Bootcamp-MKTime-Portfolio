@@ -1,0 +1,66 @@
+body {
+  background: rgb(39, 167, 222);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+}
+
+#wname {
+    text-align: center;
+    color: white;
+    font-family: Cyreal;
+    font-size: 25px;
+    font-weight: 450;
+  } 
+
+p {
+    text-align: left;
+    color: white;
+    font-family: Cyreal;
+    font-size: 21px;
+  } 
+
+#desc {
+    color: white;
+    font-family: Cyreal;
+    font-size: 17px;
+}  
+
+.container {
+    align-self: center;
+    align-content: flex-start;
+    background: rgba(36, 109, 121, 1);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+.row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}  
+
+label {
+    font-family: Cyreal;
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+  } 
+
+.card {
+    align-items: center;  
+    border-radius: 10px;
+    margin: 30px;
+    outline: 3px solid rgba(70, 81, 128, 1);
+  }
+ 
+.card-body {
+    justify-items: center;
+}
+ 
+img {
+    height: 180px;
+    width: 95px;
+}  
+  
